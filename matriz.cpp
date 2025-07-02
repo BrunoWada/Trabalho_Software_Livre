@@ -1,0 +1,25 @@
+#include <iostream> 
+
+using namespace std; 
+
+int main() {
+    int size; // Declara o tamanho das matrizes (lado N)
+    cin >> size;       
+
+    // Declaração das matrizes
+    int matriz_1[size][size];   // Primeira matriz
+    int matriz_2[size][size];   // Segunda matriz
+    int Result[size][size];     // Matriz resultante
+
+    // Leitura dos elementos da Matriz 1
+    for (int i = 0; i < size; i++)
+        for (int j = 0; j < size; j++)
+            cin >> matriz_1[i][j];
+
+    // Leitura dos elementos da Matriz 2
+    for (int i = 0; i < size; i++)
+        for (int j = 0; j < size; j++)
+            cin >> matriz_2[i][j];
+
+    return 0;
+}
