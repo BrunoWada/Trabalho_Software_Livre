@@ -20,6 +20,9 @@ int main() {
     for (int i = 0; i < size; i++)
         for (int j = 0; j < size; j++)
             cin >> matriz_2[i][j];
+    
+    char operation_type; // Declara variável para o tipo de operação
+    cin >> operation_type; // Lê o caractere da operação ('a', 's', 'm')
 
     return 0;
 }
