@@ -44,6 +44,14 @@ int main() {
     } else {
         return 1; // Retorna 1 (código de erro) para operação inválida
     }
+    
+    // Imprime a Matriz Resultante
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++){
+            cout << Result[i][j] << " "; // Imprime o elemento e um espaço
+        }
+        cout << endl; // Quebra de linha após cada linha da matriz
+    }
 
     return 0;
 }
