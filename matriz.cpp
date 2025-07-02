@@ -3,10 +3,10 @@
 using namespace std; 
 
 int main() {
-    int size; // Declara o tamanho das matrizes (lado N)
+    int size; // Declara o tamanho das matrizes
     cin >> size;       
 
-    // Declaração das matrizes
+    // Declaracao das matrizes
     int matriz_1[size][size];   // Primeira matriz
     int matriz_2[size][size];   // Segunda matriz
     int Result[size][size];     // Matriz resultante
@@ -21,19 +21,19 @@ int main() {
         for (int j = 0; j < size; j++)
             cin >> matriz_2[i][j];
     
-    char operation_type; // Declara variável para o tipo de operação
-    cin >> operation_type; // Lê o caractere da operação ('a', 's', 'm')
+    char operation_type; // Declara variavel para o tipo de operacao
+    cin >> operation_type; // Le o caractere da operacao ('a', 's', 'm')
 
-    // Bloco condicional para realizar a operação escolhida
-    if (operation_type == 'a') { // Se a operação for Adição
+    // Bloco condicional para realizar a operacao escolhida
+    if (operation_type == 'a') { // Se a operacao for Adicao
         for (int i = 0; i < size; i++)
             for (int j = 0; j < size; j++)
                 Result[i][j] = matriz_1[i][j] + matriz_2[i][j]; // Realiza a soma
-    } else if (operation_type == 's') { // Se a operação for Subtração
+    } else if (operation_type == 's') { // Se a operacao for Subtracao
         for (int i = 0; i < size; i++)
             for (int j = 0; j < size; j++)
-                Result[i][j] = matriz_1[i][j] - matriz_2[i][j]; // Realiza a subtração
-    } else if (operation_type == 'm') { // Se a operação for Multiplicação
+                Result[i][j] = matriz_1[i][j] - matriz_2[i][j]; // Realiza a subtracao
+    } else if (operation_type == 'm') { // Se a operacao for Multiplicacao
         for (int i = 0; i < size; i++)
             for (int j = 0; j < size; j++) {
                 Result[i][j] = 0; // Inicializa elemento do resultado com 0
@@ -42,15 +42,15 @@ int main() {
                     Result[i][j] += matriz_1[i][k] * matriz_2[k][j];
             }
     } else {
-        return 1; // Retorna 1 (código de erro) para operação inválida
+        return 1; // Retorna 1 (codigo de erro) para operacao invalida
     }
     
     // Imprime a Matriz Resultante
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++){
-            cout << Result[i][j] << " "; // Imprime o elemento e um espaço
+            cout << Result[i][j] << " "; // Imprime o elemento e um espaco
         }
-        cout << endl; // Quebra de linha após cada linha da matriz
+        cout << endl; // Quebra de linha apos cada linha da matriz
     }
 
     return 0;
