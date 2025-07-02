@@ -16,5 +16,16 @@ int main()
     for (i = 0; i < size; i++){
         cin >> value[i];
     }
+    // Inicializa o maior número com o primeiro elemento do vetor
+    biggest = value[0];
+    
+    // Percorre o vetor para encontrar o maior número
+    for (i = 1; i < size; i++){
+        // Se o elemento atual for maior, atualiza 'biggest'
+        if (biggest < value[i]){
+            biggest = value[i];
+        }
+    }
+    cout << biggest << endl;
     return 0; 
 }
