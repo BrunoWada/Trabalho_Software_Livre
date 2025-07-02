@@ -27,3 +27,20 @@ int Primo(int numero) {
     }
     return 1;
 }
+
+int main()
+{
+    int num;
+    cin >> num;
+    
+    // Chama a função Primo() para verificar se 'num' é primo
+    // Se a função retornar 1 (verdadeiro)
+    if (Primo(num) == 1) { 
+        cout << "Primo" << endl;
+        // Se a função retornar 0 (falso)
+        } else { 
+            cout << "Não é primo" << endl; // Imprime "Não é primo" na tela
+            }
+
+    return 0;
+}
