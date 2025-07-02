@@ -33,6 +33,16 @@ int main() {
         for (int i = 0; i < size; i++)
             for (int j = 0; j < size; j++)
                 Result[i][j] = matriz_1[i][j] - matriz_2[i][j]; // Realiza a subtração
+    } else if (operation_type == 'm') { // Se a operação for Multiplicação
+        for (int i = 0; i < size; i++)
+            for (int j = 0; j < size; j++) {
+                Result[i][j] = 0; // Inicializa elemento do resultado com 0
+                for (int k = 0; k < size; k++)
+                    // Calcula o produto da matriz (linha por coluna)
+                    Result[i][j] += matriz_1[i][k] * matriz_2[k][j];
+            }
+    } else {
+        return 1; // Retorna 1 (código de erro) para operação inválida
     }
 
     return 0;
