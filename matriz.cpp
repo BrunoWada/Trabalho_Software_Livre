@@ -24,5 +24,16 @@ int main() {
     char operation_type; // Declara variável para o tipo de operação
     cin >> operation_type; // Lê o caractere da operação ('a', 's', 'm')
 
+    // Bloco condicional para realizar a operação escolhida
+    if (operation_type == 'a') { // Se a operação for Adição
+        for (int i = 0; i < size; i++)
+            for (int j = 0; j < size; j++)
+                Result[i][j] = matriz_1[i][j] + matriz_2[i][j]; // Realiza a soma
+    } else if (operation_type == 's') { // Se a operação for Subtração
+        for (int i = 0; i < size; i++)
+            for (int j = 0; j < size; j++)
+                Result[i][j] = matriz_1[i][j] - matriz_2[i][j]; // Realiza a subtração
+    }
+
     return 0;
 }
