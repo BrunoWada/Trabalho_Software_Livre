@@ -1,31 +1,25 @@
-# Define o compilador C++
+# Compilador e flags
 CXX = g++
-# Define as flags de compilação para warnings
 CXXFLAGS = -Wall -Wextra
 
-# Lista dos arquivos-fonte
-SRCS = matriz.cpp primo.cpp vetor.cpp
-# Gera automaticamente a lista de executáveis a partir dos fontes
-# (Ex: matriz.cpp -> matriz)
-EXES = $(SRCS:.cpp=)
+# Executáveis
+EXES = primo vetor matriz
 
-# .PHONY declara que 'all' e 'clean' não são arquivos reais.
-.PHONY: all clean
-
-# A regra 'all' (padrão) depende de todos os executáveis.
+# Regra padrão: compilar todos os executáveis
 all: $(EXES)
 
-# Regra de Padrão Genérica:
-# Ensina o 'make' a criar qualquer executável (alvo %)
-# a partir de um arquivo .cpp com o mesmo nome (dependência %.cpp).
-# $@ é uma variável automática para o nome do alvo (ex: 'matriz').
-# $< é uma variável automática para a primeira dependência (ex: 'matriz.cpp').
-%: %.cpp
-	$(CXX) $(CXXFLAGS) -o $@ $<
+# Compilar primo
+primo: primo.cpp
+	$(CXX) $(CXXFLAGS) -o primo primo.cpp
 
-# Regra 'clean' mais robusta:
-# Remove todos os executáveis listados em $(EXES).
-# O hífen (-) no início do comando faz com que o 'make' ignore
-# erros caso o comando 'rm' falhe (ex: se os arquivos não existirem).
+# Compilar vetor
+vetor: vetor.cpp
+	$(CXX) $(CXXFLAGS) -o vetor vetor.cpp
+
+# Compilar matriz
+matriz: matriz.cpp
+	$(CXX) $(CXXFLAGS) -o matriz matriz.cpp
+
+# Limpar executáveis
 clean:
-	-rm -f $(EXES)
+	rm -f $(EXES)
