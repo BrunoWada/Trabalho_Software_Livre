@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    // Declara variaveis: tamanho, maior número.
+    // Declara variaveis: tamanho, maior numero.
     int size = 0, biggest = 0, i;
     
     // Le o tamanho do vetor
