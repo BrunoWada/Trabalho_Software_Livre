@@ -20,7 +20,10 @@ done
 # Executa o programa se compilado
 if [[ -x ./vetor ]]; then
     ./vetor < "$ARQUIVO_IN" > "$ARQUIVO_OUT"
-    echo "Saída gerada em $ARQUIVO_OUT"
+    echo "Saída gerada em $ARQUIVO_OUT:"
+    echo "---------------------------"
+    cat "$ARQUIVO_OUT"
+    echo "---------------------------"
 else
     echo "Executável 'vetor' não encontrado. Compile com: make vetor"
 fi
