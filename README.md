@@ -49,7 +49,7 @@ Compila os programas individualmente ou todos de uma vez.
     • make vetor  
     • make matriz  
 
-├── Limpar os executáveis
+├── Limpar os executáveis  
     • make clean.  
 
 ## Execução de teste (generate-test-*.sh)
