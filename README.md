@@ -1,4 +1,4 @@
-Bruno Matos Wada
+# Bruno Matos Wada
 
 # Trabalho: Automatização de Testes para Programas em C++
 
@@ -41,22 +41,22 @@ Em relação ao programas, são eles: primo.cpp, vetor.cpp e matriz.cpp.
 
 ### Compilando 
 
-├── Para compilar todos, utilizar:
+├── Para compilar todos, utilizar:  
     make
 
-├── Para compilar cada 1, utilizar:
-    make primo  
-    make vetor  
-    make matriz  
+├── Para compilar cada 1, utilizar:  
+    • make primo  
+    • make vetor  
+    • make matriz  
 
 ├── Limpar os executáveis
-    make clean.  
+    • make clean.  
 
 ## Execução de teste (generate-test-*.sh)
 
 ├── Cada programa possui um script que gera automaticamente uma entrada de teste, executa o programa e salva a saída.  
 ├── Caso não tenha permissão para executar, utilizar:  
-    chmod +x generate-test-*.sh (x - da a permissão de executar o programa).  
+    • chmod +x generate-test-*.sh (x - da a permissão de executar o programa).  
 
 ├── ./generate-test-primo.sh   - Gera primo.in e salva saída em primo.out  
 ├── ./generate-test-vetor.sh   - Gera vetor.in e salva saída em vetor.out  
@@ -67,7 +67,7 @@ Em relação ao programas, são eles: primo.cpp, vetor.cpp e matriz.cpp.
 ├── ./generate-test-primo.sh  
 ├── ./primo < primo.in  
 
-├── Ou então pode utilizar:
+├── Ou então pode utilizar:  
 
 ├── make primo  
 ├── ./generate-test-primo.sh  
