@@ -25,24 +25,24 @@ Em relação ao programas, são eles: primo.cpp, vetor.cpp e matriz.cpp.
 
 ### primo.cpp
 
-├── O programa lê e verifica se um numero inteiro é primo ou não.
+O programa lê e verifica se um numero inteiro é primo ou não.
 
 ### vetor.cpp
 
-├── O programa lê um vetor (conjunto de números) e mostra o maior valor.
+O programa lê um vetor (conjunto de números) e mostra o maior valor.
 
 ### Matriz.pp
 
-├── O programa lê duas matrizes quadradas (usuario determina o tamanho) e realiza operações basicas (adição, subtração e multiplicação).
+O programa lê duas matrizes quadradas (usuario determina o tamanho) e realiza operações basicas (adição, subtração e multiplicação).
 
 ## makefile
 
-├── Compila os programas individualmente ou todos de uma vez.
+Compila os programas individualmente ou todos de uma vez.
 
 ### Compilando 
 
 ├── Para compilar todos, utilizar:  
-    make
+    • make
 
 ├── Para compilar cada 1, utilizar:  
     • make primo  
@@ -54,21 +54,21 @@ Em relação ao programas, são eles: primo.cpp, vetor.cpp e matriz.cpp.
 
 ## Execução de teste (generate-test-*.sh)
 
-├── Cada programa possui um script que gera automaticamente uma entrada de teste, executa o programa e salva a saída.  
-├── Caso não tenha permissão para executar, utilizar:  
+Cada programa possui um script que gera automaticamente uma entrada de teste, executa o programa e salva a saída.  
+Caso não tenha permissão para executar, utilizar:  
     • chmod +x generate-test-*.sh (x - da a permissão de executar o programa).  
 
-├── ./generate-test-primo.sh   - Gera primo.in e salva saída em primo.out  
-├── ./generate-test-vetor.sh   - Gera vetor.in e salva saída em vetor.out  
-├── ./generate-test-matriz.sh  - Gera matriz.in e salva saída em matriz.out  
+./generate-test-primo.sh   - Gera primo.in e salva saída em primo.out  
+./generate-test-vetor.sh   - Gera vetor.in e salva saída em vetor.out  
+./generate-test-matriz.sh  - Gera matriz.in e salva saída em matriz.out  
 
 ## Exemplo para execução
 
-├── ./generate-test-primo.sh  
-├── ./primo < primo.in  
+./generate-test-primo.sh  
+./primo < primo.in  
 
-├── Ou então pode utilizar:  
+Ou então pode utilizar:  
 
-├── make primo  
-├── ./generate-test-primo.sh  
-├── cat primo.out  
+make primo  
+./generate-test-primo.sh  
+cat primo.out  
