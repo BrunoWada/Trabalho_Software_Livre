@@ -12,7 +12,7 @@ echo "Gerando entrada para matriz de tamanho ${SIZE}x${SIZE}"
 echo "Matriz 1:"
 for (( i = 0; i < SIZE; i++ )); do
     for (( j = 0; j < SIZE; j++ )); do
-        VAL=$(( RANDOM % 21 - 10 )) # valores entre -10 e 10
+        VAL=$(( RANDOM % 21 - 10 ))
         echo -n "$VAL " >> "$ARQUIVO_IN"
         printf "%4d" "$VAL"
     done
@@ -32,16 +32,19 @@ for (( i = 0; i < SIZE; i++ )); do
     echo ""
 done
 
-# Seleciona operação aleatória: a (adição), s (subtração), m (multiplicação)
+# Seleciona operação aleatória
 OPERACOES=('a' 's' 'm')
 TIPO=${OPERACOES[$RANDOM % 3]}
 echo "$TIPO" >> "$ARQUIVO_IN"
 echo "Operação: $TIPO"
 
-# Executa o programa se compilado
+# Executa o programa
 if [[ -x ./matriz ]]; then
     ./matriz < "$ARQUIVO_IN" > "$ARQUIVO_OUT"
-    echo "Saída gerada em $ARQUIVO_OUT"
+    echo "Saída gerada em $ARQUIVO_OUT:"
+    echo "---------------------------"
+    cat "$ARQUIVO_OUT"
+    echo "---------------------------"
 else
     echo "Executável 'matriz' não encontrado. Compile com: make matriz"
 fi
